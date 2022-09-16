@@ -63,7 +63,7 @@ os.remove(path.join(fileFolder2,"scratch.sb3"))
 inJson = json.load(open(path.join(fileFolder2,"scratch/project.json")))
 
 dirname = "Combined Project"
-while path.isdir(path.join(dir_path,"Projects",dirname)):
+while path.isfile(path.join(dir_path,"Projects",dirname + ".lmsp")):
     dirname = dirname + str(random.randrange(1,999))
 
 files = os.listdir(fileFolder1)
@@ -105,5 +105,3 @@ shutil.rmtree(path.join(dir_path,"Projects",dirname))
 shutil.move(path.join(dir_path,dirname + ".lmsp"),path.join(dir_path,"Projects"))
 
 input(colors.GREEN + colors.BOLD + "File succesfully generated! > " + colors.MAGENTA + "~/Projects/" + dirname + colors.RESET)
-
-print(fileFolder1)
