@@ -76,7 +76,7 @@ fromJson = json.load(open(path.join(project,"scratch/project.json"),"r+"))
 fromJson["targets"][1]["blocks"] = fromJson["targets"][1]["blocks"] | inJson["targets"][1]["blocks"]
 fromJson["targets"][1]["variables"] = fromJson["targets"][1]["variables"] | inJson["targets"][1]["variables"]
 fromJson["targets"][1]["lists"] = fromJson["targets"][1]["lists"] | inJson["targets"][1]["lists"]
-fromJson["targets"][1]["broadcasts"] = fromJson["targets"][1]["broadcasts"] | inJson["targets"][1]["broadcasts"]
+fromJson["targets"][0]["broadcasts"] = fromJson["targets"][0]["broadcasts"] | inJson["targets"][0]["broadcasts"]
 fromJson["targets"][1]["comments"] = fromJson["targets"][1]["comments"] | inJson["targets"][1]["comments"]
 fromJson["extensions"] = fromJson["extensions"] + inJson["extensions"]
 
@@ -104,14 +104,6 @@ os.rename(path.join(dir_path,"Projects",dirname + ".zip"),dirname + ".lmsp")
 shutil.rmtree(path.join(dir_path,"Projects",dirname))
 shutil.move(path.join(dir_path,dirname + ".lmsp"),path.join(dir_path,"Projects"))
 
-# zipf = shutil.make_archive(dirname, "zip", dirname)
-# shutil.rmtree(path.join(dir_path,"Projects",dirname))
-# os.rename(zipf,path.join(dir_path,"Projects",dirname + ".lmsp"))
-
-# with ZipFile(dirname + ".lmsp", 'w', zipfile.ZIP_DEFLATED) as zipf:
-#     zipdir(project + "/", zipf)
-#     shutil.move(path.join(dir_path,dirname + ".lmsp"),path.join(dir_path,"Projects"))
-#     shutil.rmtree(path.join(dir_path,"Projects",dirname))
-
+input(colors.GREEN + colors.BOLD + "File succesfully generated! > " + colors.MAGENTA + "~/Projects/" + dirname + colors.RESET)
 
 print(fileFolder1)
