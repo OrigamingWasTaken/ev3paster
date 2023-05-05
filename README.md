@@ -9,4 +9,4 @@ Exemple:
 
 All the blocks from both programms will be merged (+ variables, lists, broadcasts, comments, etc...)
 
-**By doing this, you will loose the 2nd programm informations, by that i mean: User Agent, VM, and some other things. (it shouldn't be harmuflul) + the first file will be overwritten by the combined file (i didn't find a way to prevent this so yeah, just make a backup)**
+**Please always make a backup before using this, as ev3 education app doesn't really like doing this**
