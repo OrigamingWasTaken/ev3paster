@@ -4,7 +4,7 @@ EV3 Paster is a HTML webpage made to run locally in the browser. It supports mer
 
 ## How to use?
 
-You can drag and drop, or click the button to select a **main** file. The main file is the file you want to copy the blocks into.
+You can __drag and drop__, or __click the button__ to select a **main** file. The main file is the file you want to copy the blocks into.
 
 You also need to upload your **From** file. This files contains the blocks, variables, etc that will be copied over to the main file.
 
