@@ -54,10 +54,13 @@
     left: 50%;
     top: 80%;
     transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 10%;
 }
 
 #process p {
-    font-size: 2vw;
+    font-size: 2em;
+    font-size: 3vw;
     user-select: none;
 }
 
@@ -71,7 +74,20 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-    width: 15%;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 11%;
+}
+
+#title {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1em;
+    font-size: 2vw;
 }
 
 #error {
