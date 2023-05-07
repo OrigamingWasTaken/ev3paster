@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+#source-dropzone {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid rgb(187, 187, 187);
+    width: 35%;
+    height: 20%;
+    text-align: center;
+    background-color: white;
+}
+
+#source-dropzone p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5vw;
+    background-color: transparent;
+    user-select: none;
+}
+
+#from-dropzone {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid rgb(187, 187, 187);
+    width: 35%;
+    height: 20%;
+    text-align: center;
+    background-color: rgb(255, 241, 216);
+}
+
+#from-dropzone p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5vw;
+    background-color: transparent;
+    user-select: none;
+}
+
+#process {
+    border: 3px solid rgb(130, 130, 130);
+    color: rgb(0, 0, 0);
+    background-color: greenyellow;
+    width: 30%;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
+}
+
+#process p {
+    font-size: 2vw;
+    user-select: none;
+}
+
+body {
+    background-color: rgb(246, 245, 245);
+    text-align: center;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', "sans-serif";
+}
+
+img {
+    width: 15%;
+}
+
+#error {
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: red;
+}
+
+#process:hover {
+    background-color: rgb(146, 215, 42);
+    transition: 0.1s;
+}
+#process:active {
+    background-color: rgb(124, 183, 37);
+    transition: 0.1s;
+}
+
+#source-dropzone:hover {
+    background-color: rgb(241, 241, 241) !important;
+    transition: 0.1s;
+}
+#source-dropzone:active {
+    background-color: rgb(225, 225, 225) !important;
+    transition: 0.1s;
+}
+
+#from-dropzone:hover {
+    background-color: rgb(244, 230, 206) !important;
+    transition: 0.1s;
+}
+#from-dropzone:active {
+    background-color: rgb(218, 205, 184) !important;
+    transition: 0.1s;
+}
