@@ -1,9 +1,9 @@
-const sourceDropZone = document.querySelector("#source-dropzone")
-const sourceP = document.querySelector("#source-dropzone p")
-const fromDropZone = document.querySelector("#from-dropzone")
-const fromP = document.querySelector("#from-dropzone p")
-const processFiles = document.querySelector("#process")
-const errorHandler = document.querySelector("#error")
+const sourceDropZone = document.querySelector(".source-dropzone")
+const sourceP = document.querySelector(".source-dropzone p")
+const fromDropZone = document.querySelector(".from-dropzone")
+const fromP = document.querySelector(".from-dropzone p")
+const processFiles = document.querySelector(".process")
+const errorHandler = document.querySelector(".error")
 
 var sourceFile
 var sourceJSON
@@ -215,8 +215,10 @@ const mergeFiles = async() => {
 	const url = URL.createObjectURL(updatedZip)
 	const link = document.createElement("a")
 	link.href = url
-	link.download = "Merged-" + sourceFile.name
+	const newFileName = "Merged-" + sourceFile.name
+	link.download = newFileName
 	link.click()
+	alert('Your file has been downloaded as "' + "Merged-" + sourceFile.name + '"')
 	}
 
 processFiles.onmousedown = async function (e) {

@@ -1,126 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-#source-dropzone {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 2px solid rgb(187, 187, 187);
-    width: 35%;
-    height: 20%;
-    text-align: center;
-    background-color: white;
-}
-
-#source-dropzone p {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 2.5vw;
-    background-color: transparent;
-    user-select: none;
-}
-
-#from-dropzone {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 2px solid rgb(187, 187, 187);
-    width: 35%;
-    height: 20%;
-    text-align: center;
-    background-color: rgb(255, 241, 216);
-}
-
-#from-dropzone p {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 2.5vw;
-    background-color: transparent;
-    user-select: none;
-}
-
-#process {
-    border: 3px solid rgb(130, 130, 130);
-    color: rgb(0, 0, 0);
-    background-color: greenyellow;
-    width: 30%;
-    height: 10%;
-    position: absolute;
-    left: 50%;
-    top: 80%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    line-height: 10%;
-}
-
-#process p {
-    font-size: 2em;
-    font-size: 3vw;
-    user-select: none;
-}
-
+/* RESET STYLE */
+html,
 body {
-    background-color: rgb(246, 245, 245);
-    text-align: center;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: rgb(244, 242, 242);
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', "sans-serif";
+html {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid;
+}
+
+/* Website Style */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 2rem;
+    text-align: center;
+    width: 60vw;
+}
+
+p,h1,h2,h3,h4,h5,h6,a {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 980px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+.title {
+    font-size: 2.3vw;
+}
+
+.source-dropzone,.from-dropzone {
+    border: 2px solid rgb(187, 187, 187);
+    background: white;
+    height: 200px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+.source-dropzone,.from-dropzone p {
+    font-size: 2vw;
+}
+.source-dropzone:hover {
+    transition: 0.1s;
+    background-color: rgb(244, 244, 244);
+}
+.source-dropzone:active {
+    transition: 0.1s;
+    background-color: rgb(229, 229, 229);
+}
+
+.from-dropzone {
+    background: rgb(255, 233, 193);
+}
+.from-dropzone:hover {
+    transition: 0.1s;
+    background: rgb(241, 220, 182);
+}
+.from-dropzone:active {
+    transition: 0.1s;
+    background: rgb(222, 203, 168);
+}
+
+.process {
+    border: 2px solid rgb(187, 187, 187);
+    background: rgb(153, 255, 112);
+    height: 100px;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+.process p {
+    font-size: 1.5vw;
+}
+.process:hover {
+    transition: 0.1s;
+    background: rgb(145, 241, 106);
+}
+.process:hover {
+    transition: 0.1s;
+    background: rgb(135, 226, 100);
 }
 
 img {
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 11%;
-}
-
-#title {
-    position: absolute;
-    top: 17%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 1em;
-    font-size: 2vw;
-}
-
-#error {
-    position: absolute;
-    top: 86%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: red;
-}
-
-#process:hover {
-    background-color: rgb(146, 215, 42);
-    transition: 0.1s;
-}
-#process:active {
-    background-color: rgb(124, 183, 37);
-    transition: 0.1s;
-}
-
-#source-dropzone:hover {
-    background-color: rgb(241, 241, 241) !important;
-    transition: 0.1s;
-}
-#source-dropzone:active {
-    background-color: rgb(225, 225, 225) !important;
-    transition: 0.1s;
-}
-
-#from-dropzone:hover {
-    background-color: rgb(244, 230, 206) !important;
-    transition: 0.1s;
-}
-#from-dropzone:active {
-    background-color: rgb(218, 205, 184) !important;
-    transition: 0.1s;
+    width: 15%;
 }
