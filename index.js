@@ -23,7 +23,7 @@ const saveContent = (file) => {
 }
 
 const isLmsp = (file) => {
-	return file.name.split(".").pop() == "lmsp"
+	return file.name.split(".").pop() == "lmsp" || file.name.split(".").pop() == "llsp3"
 }
 
 sourceDropZone.addEventListener("dragover", (e) => {
@@ -43,14 +43,14 @@ sourceDropZone.addEventListener("drop", (e) => {
 		sourceFile = file
 		sourceP.innerHTML = sourceFile.name
 	} else {
-		alert("The file you provided is not .lmsp")
+		alert("The file you provided is not .lmsp or .llsp3")
 	}
 })
 
 sourceDropZone.onmousedown = function (e) {
 	var input = document.createElement("input")
 	input.type = "file"
-	input.accept = ".lmsp"
+	input.accept = ".lmsp,.llsp3"
 
 	input.onchange = (e) => {
 		var file = e.target.files[0]
@@ -58,7 +58,7 @@ sourceDropZone.onmousedown = function (e) {
 			sourceFile = file
 			sourceP.innerHTML = sourceFile.name
 		} else {
-			alert("The file you provided is not .lmsp")
+			alert("The file you provided is not .lmsp or .llsp3")
 		}
 	}
 
@@ -82,14 +82,14 @@ fromDropZone.addEventListener("drop", (e) => {
 		fromFile = file
 		fromP.innerHTML = fromFile.name
 	} else {
-		alert("The file you provided is not .lmsp")
+		alert("The file you provided is not .lmsp or .llsp3")
 	}
 })
 
 fromDropZone.onmousedown = function (e) {
 	const input = document.createElement("input")
 	input.type = "file"
-	input.accept = ".lmsp"
+	input.accept = ".lmsp,.llsp3"
 
 	input.onchange = (e) => {
 		var file = e.target.files[0]
@@ -97,7 +97,7 @@ fromDropZone.onmousedown = function (e) {
 			fromFile = file
 			fromP.innerHTML = fromFile.name
 		} else {
-			alert("The file you provided is not .lmsp")
+			alert("The file you provided is not .lmsp or .llsp3")
 		}
 	}
 
